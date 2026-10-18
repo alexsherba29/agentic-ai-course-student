@@ -262,12 +262,12 @@ New exercises are released one at a time in the course template. To add one to y
 ```
 git remote add course https://github.com/alexsherba29/agentic-ai-course-student.git
 git fetch course
-git checkout course/main -- exercises/02-docs-agent
+git checkout course/main -- common exercises/02-docs-agent
 git commit -m "Add exercise 02"
 git push
 ```
 
-Run the `git remote add` line only the first time. After that, `git fetch course` and the `checkout` line are enough, with the new exercise's folder name. This copies only that folder; your earlier exercises stay exactly as you left them.
+Run the `git remote add` line only the first time. After that, `git fetch course` and the `checkout` line are enough, with the new exercise's folder name. It copies the new exercise and the latest shared course code in `common/` (which you never edit). Your earlier exercises stay exactly as you left them.
 
 ## Troubleshooting
 

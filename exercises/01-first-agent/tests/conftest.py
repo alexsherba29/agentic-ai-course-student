@@ -5,7 +5,6 @@ them at other folders with the EXERCISE_TARGET environment variable.)
 """
 from __future__ import annotations
 
-import importlib.util
 import os
 import sys
 from pathlib import Path
@@ -23,12 +22,9 @@ def _load(module_name: str):
     path = EXERCISE_DIR / target / f"{module_name}.py"
     if not path.exists():
         pytest.fail(f"Cannot find {path} — did you move or rename it?", pytrace=False)
-    unique = f"{EXERCISE_DIR.name.replace('-', '_')}_{target}_{module_name}"
-    spec = importlib.util.spec_from_file_location(unique, path)
-    module = importlib.util.module_from_spec(spec)
-    sys.modules[unique] = module  # dataclasses look their module up while loading
-    spec.loader.exec_module(module)
-    return module
+    from common.reuse import load_module
+
+    return load_module(path, f"{EXERCISE_DIR.name}_{target}_{module_name}")
 
 
 @pytest.fixture(scope="session")
