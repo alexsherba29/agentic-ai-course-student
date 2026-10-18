@@ -1,0 +1,2 @@
+# Everything else the course uses is part of Python's standard library.
+pytest>=7.4
