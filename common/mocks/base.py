@@ -10,11 +10,14 @@ purpose, but deterministically, so the same test always sees the same failure:
 - ``fail_mode="slow"``: works, but records a simulated latency (no real waiting).
 
 ``fail_on_calls={1, 3}`` limits the fault to those call numbers (counted from 1
-across all methods of one mock). ``None`` means every call.
+across all methods of one mock). ``None`` means every call. ``fail_method="create_ticket"``
+limits the fault to that one method, and then ``fail_on_calls`` counts only its calls
+("the first create_ticket call loses its reply").
 """
 from __future__ import annotations
 
 import random
+from collections import Counter
 from dataclasses import dataclass
 from typing import Any
 
@@ -40,13 +43,16 @@ class CallRecord:
 
 
 class MockService:
-    def __init__(self, fail_mode: str = "none", seed: int = 0, fail_on_calls: set[int] | None = None):
+    def __init__(self, fail_mode: str = "none", seed: int = 0, fail_on_calls: set[int] | None = None,
+                 fail_method: str | None = None):
         if fail_mode not in FAIL_MODES:
             raise ValueError(f"Unknown fail_mode {fail_mode!r}. Choose one of {FAIL_MODES}.")
         self.fail_mode = fail_mode
         self.fail_on_calls = set(fail_on_calls) if fail_on_calls is not None else None
+        self.fail_method = fail_method
         self.rng = random.Random(seed)
         self.call_log: list[CallRecord] = []
+        self._calls_per_method: Counter[str] = Counter()
         self._fault_active = False
 
     def calls(self, method: str | None = None) -> list[CallRecord]:
@@ -57,8 +63,12 @@ class MockService:
         """Log the call and apply any fault that happens *before* the work."""
         record = CallRecord(method, dict(args), "ok")
         self.call_log.append(record)
-        number = len(self.call_log)
-        self._fault_active = self.fail_on_calls is None or number in self.fail_on_calls
+        self._calls_per_method[method] += 1
+        if self.fail_method is None:
+            targeted, number = True, len(self.call_log)  # every method, counted together
+        else:
+            targeted, number = method == self.fail_method, self._calls_per_method[method]
+        self._fault_active = targeted and (self.fail_on_calls is None or number in self.fail_on_calls)
         if not self._fault_active:
             return record
         if self.fail_mode == "slow":

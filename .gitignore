@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 .venv/
 .pytest_cache/
+# saved demo state (exercise 03+): local only, never submitted
+exercises/*/starter/tasks.json
+exercises/*/starter/tasks.tmp
