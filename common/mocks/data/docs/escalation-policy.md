@@ -15,7 +15,7 @@ Every ticket must contain:
 2. What the user tried, and the exact error message if there is one.
 3. The time of the last attempt.
 
-Never put passwords, one-time codes or other secrets in a ticket.
+Never put passwords, one-time codes or other secrets in a ticket. Never ask a user for their password, and never tell anyone to turn off a firewall or other security software.
 
 Priority: use "high" only when many users are affected or someone cannot work at all; otherwise use "normal".
 
