@@ -22,6 +22,13 @@ New exercises appear here as they're released. The instructor will tell you how 
 - `common/`: shared course code: the model interface, a scripted fake model, and mock IT systems. Read it, but don't change it.
 - `workspace/`: the setup guide and the smoke test.
 
+## Course staff
+
+- **Dr. Eran Beeri-Bamani**, course lecturer. Founder and director of the Physical Human Intelligence Lab (PHI Lab).
+- **Alex Scherbakov**, course TA.
+
+**Questions?** Email **eran.beeri-bamani@biu.ac.il**.
+
 ## Submitting
 
 Each exercise is submitted as a link to its folder at a tag, for example:

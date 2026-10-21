@@ -56,7 +56,7 @@ def check_course_code() -> tuple[str, str]:
     final = llm.chat(messages)
     if result["status"] == "outage" and final.text and llm.call_count == 2:
         return OK, "course code works with the fake model"
-    return FAIL, "the fake-model round trip gave an unexpected result — ask on the course forum"
+    return FAIL, "the fake-model round trip gave an unexpected result — email eran.beeri-bamani@biu.ac.il"
 
 
 def check_git() -> tuple[str, str]:
