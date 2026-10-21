@@ -6,6 +6,7 @@ This guide sets up everything you need for all five exercises, on your own lapto
 - **Cost:** nothing. Every tool here is free, and you never need a paid subscription or API credits.
 - **Disk space:** about 4 GB, most of it for the AI model.
 - **Your laptop:** Windows 10/11, macOS 12 or newer, or Linux, with at least **8 GB of RAM** for the real model. Less than that is OK too; see step 8.
+- **Questions?** Email **eran.beeri-bamani@biu.ac.il** (see the end of this guide for what to include).
 
 > **Commands.** Lines in grey boxes are commands to type in a terminal. On **Windows**, use **PowerShell** (Start menu → type "PowerShell"). On **macOS**, use **Terminal** (Applications → Utilities). On **Linux**, use any terminal. After step 7, always run commands from the **top folder of your course repository**.
 
@@ -186,7 +187,7 @@ Then tell the course code to use it. Set this in each new terminal, after activa
 | Windows PowerShell | `$env:OLLAMA_MODEL = "qwen2.5:1.5b"` |
 | macOS/Linux | `export OLLAMA_MODEL=qwen2.5:1.5b` |
 
-**If Ollama can't run on your laptop at all**, don't worry. Every exercise and **every test** also works with the course's *fake model*, which follows a fixed script. You'll do all the tasks the same way; you just won't see a real model's answers. Tell the instructor so they know.
+**If Ollama can't run on your laptop at all**, don't worry. Every exercise and **every test** also works with the course's *fake model*, which follows a fixed script. You'll do all the tasks the same way; you just won't see a real model's answers. Let the course staff know by email (eran.beeri-bamani@biu.ac.il).
 
 ## 9. Run the smoke test
 
@@ -284,4 +285,11 @@ Run the `git remote add` line only the first time. After that, `git fetch course
 | `remote: Repository not found` when pushing | Check that you cloned *your* repository (`git remote -v`), not the course template. |
 | The submission link shows "404" | Check that you pushed the tag (`git push origin ex01-submit`), that the folder name is correct, and that the instructor is a collaborator (step 6.5). |
 
-Still stuck? Post the full error message (copy the text; a screenshot is OK too) on the course forum.
+## Questions and help
+
+Still stuck, or have any question about the course? Email **eran.beeri-bamani@biu.ac.il**. Include:
+
+- which step or exercise you're on;
+- the command you ran;
+- the **full error message** (copy the text; a screenshot is OK too);
+- your system (Windows, macOS or Linux).
