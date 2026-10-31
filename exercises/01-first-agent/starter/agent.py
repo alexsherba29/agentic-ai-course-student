@@ -1,4 +1,4 @@
-"""Exercise 01: a first support agent — complete the four TODO(student) tasks.
+"""Lesson 01: a first support agent — complete the four TODO(student) tasks.
 
 An agent is a loop around a model:
 
@@ -108,7 +108,7 @@ def run_agent(
 
         # TODO(student) 3: use the tools the model chose, then let the loop continue.
         #   For each call in response.tool_calls:
-        #     - run it:  result = run_tool(tools, call)   (Task 2)
+        #     - run it:  result = run_tool(tools, call)   (step 2)
         #     - add the result to `messages` with tool_message(call.name, result), so the
         #       model sees it on the next turn — this is how new information changes the
         #       next action,

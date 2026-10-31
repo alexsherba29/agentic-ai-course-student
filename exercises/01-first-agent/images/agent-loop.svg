@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="960" height="480" role="img" aria-label="The agent loop">
+<title>The agent loop</title><defs><marker id="a-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#004a2c"/></marker><marker id="a-bad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c2410c"/></marker><marker id="a-good" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#15803d"/></marker><marker id="a-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9ca3af"/></marker></defs>
+<rect x="1" y="1" width="958" height="478" rx="14" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<rect x="1" y="1" width="958" height="8" rx="4" fill="#004a2c"/>
+<text x="28" y="44" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="start" fill="#004a2c">The agent loop</text>
+<text x="28" y="70" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="normal" text-anchor="start" fill="#4b5563">The model chooses; your code acts. Repeat until the model answers, or the step limit is reached.</text>
+<rect x="30" y="180" width="150" height="70" rx="10" fill="#fef9c3" stroke="#a16207" stroke-width="2"/>
+<text x="105.0" y="210.0" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#713f12">Question</text>
+<text x="105.0" y="232.0" font-size="14" text-anchor="middle"><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">from the user</tspan></text>
+<rect x="250" y="160" width="230" height="110" rx="10" fill="#e8f6fb" stroke="#2b8db3" stroke-width="2"/>
+<text x="365.0" y="200.0" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#004a2c">1. Ask the model</text>
+<text x="365.0" y="222.0" font-size="14" text-anchor="middle"><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">it sees all the messages</tspan></text>
+<text x="365.0" y="242.0" font-size="14" text-anchor="middle"><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">and the tool descriptions</tspan></text>
+<rect x="580" y="95" width="220" height="80" rx="10" fill="#e9f7ef" stroke="#15803d" stroke-width="2"/>
+<text x="690.0" y="130.0" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#14532d">Final answer</text>
+<text x="690.0" y="152.0" font-size="14" text-anchor="middle"><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">STOP: &quot;answered&quot;</tspan></text>
+<rect x="580" y="255" width="260" height="110" rx="10" fill="#f3f4f6" stroke="#6b7280" stroke-width="2"/>
+<text x="710.0" y="295.0" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#1f2937">2. Run the tool</text>
+<text x="710.0" y="317.0" font-size="14" text-anchor="middle"><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">the model asked for, e.g.</tspan></text>
+<text x="710.0" y="337.0" font-size="14" text-anchor="middle"><tspan font-family="Consolas, Menlo, DejaVu Sans Mono, monospace" fill="#1f2937">check_service_status(&quot;vpn&quot;)</tspan></text>
+<rect x="250" y="345" width="230" height="90" rx="10" fill="#f3f4f6" stroke="#6b7280" stroke-width="2"/>
+<text x="365.0" y="375.0" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#1f2937">3. Add the result</text>
+<text x="365.0" y="397.0" font-size="14" text-anchor="middle"><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">to the messages, so the</tspan></text>
+<text x="365.0" y="417.0" font-size="14" text-anchor="middle"><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">model can see it</tspan></text>
+<rect x="30" y="345" width="170" height="90" rx="10" fill="#fff1e6" stroke="#c2410c" stroke-width="2"/>
+<text x="115.0" y="375.5" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#9a3412">Step limit</text>
+<text x="115.0" y="396.5" font-size="13" text-anchor="middle"><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">reached? STOP:</tspan></text>
+<text x="115.0" y="415.5" font-size="13" text-anchor="middle"><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">&quot;max_steps&quot;</tspan></text>
+<polyline points="180,215 246,215" fill="none" stroke="#004a2c" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a-green)"/>
+<polyline points="480,190 530,135 576,135" fill="none" stroke="#15803d" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a-good)"/>
+<text x="470" y="128" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="start" fill="#15803d">no tool call</text>
+<polyline points="480,240 530,310 576,310" fill="none" stroke="#004a2c" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a-green)"/>
+<text x="505" y="292" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="start" fill="#004a2c">tool call</text>
+<polyline points="710,365 710,390 484,390" fill="none" stroke="#004a2c" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a-green)"/>
+<polyline points="320,345 320,274" fill="none" stroke="#004a2c" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a-green)"/>
+<text x="330" y="315" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="start" fill="#004a2c">next step</text>
+<polyline points="246,410 204,410" fill="none" stroke="#c2410c" stroke-width="2.5" stroke-linejoin="round" stroke-dasharray="7 5" marker-end="url(#a-bad)"/>
+<text x="30" y="462" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#4b5563" font-style="italic">One step = one model call + the tools it asked for. Before each model call, the agent checks max_steps.</text>
+</svg>

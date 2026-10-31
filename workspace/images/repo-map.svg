@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="Your course repository">
+<title>Your course repository</title><defs><marker id="a-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#004a2c"/></marker><marker id="a-bad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c2410c"/></marker><marker id="a-good" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#15803d"/></marker><marker id="a-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9ca3af"/></marker></defs>
+<rect x="1" y="1" width="958" height="598" rx="14" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<rect x="1" y="1" width="958" height="8" rx="4" fill="#004a2c"/>
+<text x="28" y="44" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="start" fill="#004a2c">Your course repository</text>
+<text x="28" y="70" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="normal" text-anchor="start" fill="#4b5563">What each folder is for. ✏️ = you edit it; 🔒 = read it, don&#x27;t change it.</text>
+<rect x="28" y="100" width="270" height="200" rx="10" fill="#ffffff" stroke="#9ca3af" stroke-width="2"/>
+<text x="42" y="165.0" font-family="Consolas, Menlo, DejaVu Sans Mono, monospace" font-size="16" font-weight="bold" text-anchor="start" fill="#1f2937">workspace/  🔒</text>
+<text x="42" y="187.0" font-size="14" text-anchor="start"><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">Set up once, at the start:</tspan></text>
+<text x="42" y="207.0" font-size="14" text-anchor="start"><tspan font-family="Consolas, Menlo, DejaVu Sans Mono, monospace" fill="#1f2937">SETUP.md</tspan><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">  step-by-step setup</tspan></text>
+<text x="42" y="227.0" font-size="14" text-anchor="start"><tspan font-family="Consolas, Menlo, DejaVu Sans Mono, monospace" fill="#1f2937">smoke_test.py</tspan><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">  checks your laptop</tspan></text>
+<text x="42" y="247.0" font-size="14" text-anchor="start"><tspan font-family="Consolas, Menlo, DejaVu Sans Mono, monospace" fill="#1f2937">GLOSSARY.md</tspan><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">  every course term</tspan></text>
+<rect x="28" y="320" width="270" height="255" rx="10" fill="#e8f6fb" stroke="#2b8db3" stroke-width="2"/>
+<text x="42" y="382.5" font-family="Consolas, Menlo, DejaVu Sans Mono, monospace" font-size="16" font-weight="bold" text-anchor="start" fill="#004a2c">common/  🔒</text>
+<text x="42" y="404.5" font-size="14" text-anchor="start"><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">Shared course code that every</tspan></text>
+<text x="42" y="424.5" font-size="14" text-anchor="start"><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">exercise uses:</tspan></text>
+<text x="42" y="444.5" font-size="14" text-anchor="start"><tspan font-family="Consolas, Menlo, DejaVu Sans Mono, monospace" fill="#1f2937">llm.py</tspan><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">  talks to a model</tspan></text>
+<text x="42" y="464.5" font-size="14" text-anchor="start"><tspan font-family="Consolas, Menlo, DejaVu Sans Mono, monospace" fill="#1f2937">fake_llm.py</tspan><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">  a pretend model</tspan></text>
+<text x="42" y="484.5" font-size="14" text-anchor="start"><tspan font-family="Consolas, Menlo, DejaVu Sans Mono, monospace" fill="#1f2937">mocks/</tspan><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">  pretend IT systems</tspan></text>
+<text x="42" y="504.5" font-size="14" text-anchor="start"><tspan font-family="Consolas, Menlo, DejaVu Sans Mono, monospace" fill="#1f2937">tasks.py</tspan><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">  saved tasks</tspan></text>
+<text x="42" y="524.5" font-size="14" text-anchor="start"><tspan font-family="Consolas, Menlo, DejaVu Sans Mono, monospace" fill="#1f2937">reuse.py</tspan><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">  loads earlier code</tspan></text>
+<rect x="322" y="100" width="610" height="475" rx="10" fill="#ffffff" stroke="#9ca3af" stroke-width="2"/>
+<text x="342" y="130" font-family="Consolas, Menlo, DejaVu Sans Mono, monospace" font-size="17" font-weight="bold" text-anchor="start" fill="#1f2937">exercises/</text>
+<text x="470" y="130" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" text-anchor="start" fill="#4b5563">one folder per exercise</text>
+<rect x="342" y="148" width="280" height="120" rx="10" fill="#e8f6fb" stroke="#2b8db3" stroke-width="2"/>
+<text x="482.0" y="183.0" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#004a2c">Lessons  01 · 02 · 03</text>
+<text x="482.0" y="205.0" font-size="14" text-anchor="middle"><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">Built live in class with</tspan></text>
+<text x="482.0" y="225.0" font-size="14" text-anchor="middle"><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">the lecturer. Not submitted.</tspan></text>
+<text x="482.0" y="245.0" font-size="14" text-anchor="middle"><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">Each one builds on the last.</tspan></text>
+<rect x="632" y="148" width="280" height="120" rx="10" fill="#fef9c3" stroke="#a16207" stroke-width="2"/>
+<text x="772.0" y="183.0" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#713f12">Homework  04 · 05</text>
+<text x="772.0" y="205.0" font-size="14" text-anchor="middle"><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">You do it alone and submit it.</tspan></text>
+<text x="772.0" y="225.0" font-size="14" text-anchor="middle"><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">Each one stands alone:</tspan></text>
+<text x="772.0" y="245.0" font-size="14" text-anchor="middle"><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">it doesn&#x27;t need your lessons.</tspan></text>
+<text x="342" y="300" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="start" fill="#1f2937">Inside every exercise folder:</text>
+<rect x="342" y="308" width="570" height="32" rx="6" fill="#ffffff"/>
+<text x="356" y="330" font-family="Consolas, Menlo, DejaVu Sans Mono, monospace" font-size="15" font-weight="bold" text-anchor="start" fill="#1f2937">README.md</text>
+<text x="470" y="330" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" text-anchor="start" fill="#4b5563">the handout: what to do, step by step</text>
+<text x="892" y="330" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="normal" text-anchor="end" fill="#1f2937">🔒</text>
+<rect x="342" y="346" width="570" height="32" rx="6" fill="#f9fafb"/>
+<text x="356" y="368" font-family="Consolas, Menlo, DejaVu Sans Mono, monospace" font-size="15" font-weight="bold" text-anchor="start" fill="#1f2937">starter/</text>
+<text x="470" y="368" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" text-anchor="start" fill="#4b5563">your code: finish the TODO(student) parts</text>
+<text x="892" y="368" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="normal" text-anchor="end" fill="#1f2937">✏️</text>
+<rect x="342" y="384" width="570" height="32" rx="6" fill="#ffffff"/>
+<text x="356" y="406" font-family="Consolas, Menlo, DejaVu Sans Mono, monospace" font-size="15" font-weight="bold" text-anchor="start" fill="#1f2937">tests/</text>
+<text x="470" y="406" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" text-anchor="start" fill="#4b5563">checks you can run: python -m pytest …</text>
+<text x="892" y="406" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="normal" text-anchor="end" fill="#1f2937">🔒</text>
+<rect x="342" y="422" width="570" height="32" rx="6" fill="#f9fafb"/>
+<text x="356" y="444" font-family="Consolas, Menlo, DejaVu Sans Mono, monospace" font-size="15" font-weight="bold" text-anchor="start" fill="#1f2937">images/</text>
+<text x="470" y="444" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" text-anchor="start" fill="#4b5563">the diagrams in the handout</text>
+<text x="892" y="444" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="normal" text-anchor="end" fill="#1f2937">🔒</text>
+<rect x="342" y="460" width="570" height="32" rx="6" fill="#ffffff"/>
+<text x="356" y="482" font-family="Consolas, Menlo, DejaVu Sans Mono, monospace" font-size="15" font-weight="bold" text-anchor="start" fill="#1f2937">base/</text>
+<text x="470" y="482" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" text-anchor="start" fill="#4b5563">homework only: the lesson code it builds on</text>
+<text x="892" y="482" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="normal" text-anchor="end" fill="#1f2937">🔒</text>
+<rect x="342" y="498" width="570" height="32" rx="6" fill="#f9fafb"/>
+<text x="356" y="520" font-family="Consolas, Menlo, DejaVu Sans Mono, monospace" font-size="15" font-weight="bold" text-anchor="start" fill="#1f2937">solution/</text>
+<text x="470" y="520" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" text-anchor="start" fill="#4b5563">appears when the solution is published</text>
+<text x="892" y="520" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="normal" text-anchor="end" fill="#1f2937">🔒</text>
+</svg>

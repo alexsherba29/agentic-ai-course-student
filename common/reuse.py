@@ -6,6 +6,10 @@ agent instead of a copy. That happens silently. If your earlier code isn't usabl
 reference version and prints one line saying why, so you can still work on the new one.
 
 Set the environment variable ``USE_REFERENCE=1`` to always use the reference version.
+
+Homework exercises (04 and 05) don't use your lesson code at all. Each one carries the
+lesson code it needs in its own ``base/`` folder and loads it with ``load_base``, so a
+homework works the same for everyone, whatever happened in your lesson folders.
 """
 from __future__ import annotations
 
@@ -20,6 +24,7 @@ REPO = Path(__file__).resolve().parents[1]
 TODO_MARKER = 'raise NotImplementedError("TODO(student)'
 _loaded: dict[tuple, ModuleType] = {}  # each earlier module is loaded once per run
 _inside_reference = 0  # > 0 while a reference copy is loading: its own earlier loads stay quiet
+_base_dirs: list[Path] = []  # the base/ folder being loaded from (see load_base)
 
 
 def load_previous(
@@ -37,9 +42,32 @@ def load_previous(
     (e.g. exercise 01's in ``exercises/02-…/reference``), unless ``reference_dir`` says otherwise.
     ``required`` names (e.g. ``("run_agent",)``) must exist in your module, or the reference is used.
     """
+    if _base_dirs:  # we're inside a homework's base/ code: its earlier lessons come from base/ too
+        return load_base(_base_dirs[-1], exercise, module)
     key = (exercise, module, str(repo_root), os.environ.get("USE_REFERENCE") == "1")
     if key not in _loaded:
         _loaded[key] = _load_own_or_reference(exercise, module, reference_dir, repo_root, required, log)
+    return _loaded[key]
+
+
+def load_base(base_dir: Path, exercise: str, module: str) -> ModuleType:
+    """Load the provided lesson code ``<base_dir>/<exercise>/<module>.py`` (homework only).
+
+    Anything that file loads from an earlier lesson also comes from ``base_dir``, never
+    from your own lesson folders.
+    """
+    base_dir = Path(base_dir)
+    path = base_dir / exercise / f"{module}.py"
+    key = ("base", str(path))
+    if key not in _loaded:
+        if not path.is_file():
+            raise FileNotFoundError(f"The homework's base folder has no {exercise}/{module}.py ({path}). "
+                                    "Get the exercise again (workspace/SETUP.md, step 12) or ask the course staff.")
+        _base_dirs.append(base_dir)
+        try:
+            _loaded[key] = load_module(path, f"base_{base_dir.parent.name}_{exercise}_{module}")
+        finally:
+            _base_dirs.pop()
     return _loaded[key]
 
 
@@ -58,7 +86,7 @@ def _load_own_or_reference(exercise, module, reference_dir, repo_root, required,
         except Exception as err:  # any import-time failure means: use the reference instead
             reason = f"yours doesn't load: {type(err).__name__}: {err}"
     if not _inside_reference:  # one line per file *you* depend on, not for the reference's own imports
-        log(f"(using the reference exercise {exercise[:2]} {module}.py, because {reason})")
+        log(f"(using the reference lesson {exercise[:2]} {module}.py, because {reason})")
     reference_dir = reference_dir or _reference_dir(exercise, repo_root)
     _inside_reference += 1
     try:

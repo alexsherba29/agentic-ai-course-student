@@ -1,6 +1,8 @@
 # Course workspace setup
 
-This guide sets up everything you need for all five exercises, on your own laptop. You only do it **once**, at the start of the course.
+This guide sets up everything you need for the course, on your own laptop: three **lessons** (01–03), which you build in class with the lecturer, and two **homework** exercises (04–05), which you do on your own and submit. You only do the setup **once**, at the start of the course.
+
+A word you don't know? Every course term is explained in plain language in the [glossary](GLOSSARY.md).
 
 - **Time:** about 45–60 minutes, mostly waiting for downloads.
 - **Cost:** nothing. Every tool here is free, and you never need a paid subscription or API credits.
@@ -24,13 +26,13 @@ This guide sets up everything you need for all five exercises, on your own lapto
 | 8 | Install Ollama and download the model | No |
 | 9 | Run the smoke test | — |
 
-Step 10 explains how to save your work, step 11 how to submit an exercise, and step 12 how to get each new exercise.
+Step 10 explains how to save your work, step 11 how to submit a homework, and step 12 how to get each new exercise and its published solution.
 
 ---
 
 ## 1. Create a GitHub account
 
-GitHub stores your code online. You'll submit every exercise as a link to your GitHub repository.
+GitHub stores your code online. You'll save all your course code there, and submit each homework as a link to your GitHub repository.
 
 1. Go to **https://github.com/signup**.
 2. Enter your email (your university email is best), a password and a username. **Your username will appear in your submission links**, so pick something sensible.
@@ -221,42 +223,42 @@ Your code is only safe once it's on GitHub. At the end of every session:
 
 ```
 git add -A
-git commit -m "Exercise 01: finished step 2"
+git commit -m "Lesson 01: finished step 2"
 git push
 ```
 
-Each exercise builds on **your own code** from the previous one, so keep everything in this one repository and don't delete earlier exercises.
+Lessons 02 and 03 build on **your own code** from the previous lesson, so keep everything in this one repository and don't delete earlier exercises. (The homework doesn't depend on your lessons: each one brings its own copy of the lesson code.)
 
-## 11. How to submit an exercise
+## 11. How to submit a homework
 
-Each exercise is submitted separately, as a **link to that exercise's folder** at a **tag**. A tag is a bookmark on one exact version of your code.
+Only the **homework** (04 and 05) is submitted; the lessons (01–03) are done in class and not submitted. Each homework is submitted separately, as a **link to its folder** at a **tag**. A tag is a bookmark on one exact version of your code.
 
-1. Make sure the public tests pass, for example for exercise 01:
+1. Make sure the public tests pass, for example for homework 04:
    ```
-   python -m pytest exercises/01-first-agent/tests
+   python -m pytest exercises/04-failures/tests
    ```
 2. Save and push your work (step 10).
-3. Create and push the tag for this exercise (`ex01-submit`, `ex02-submit`, … `ex05-submit`):
+3. Create and push the tag for this homework (`ex04-submit` or `ex05-submit`):
    ```
-   git tag ex01-submit
-   git push origin ex01-submit
+   git tag ex04-submit
+   git push origin ex04-submit
    ```
 4. Your submission link is:
    ```
-   https://github.com/YOUR-USERNAME/agentic-ai-course/tree/ex01-submit/exercises/01-first-agent
+   https://github.com/YOUR-USERNAME/agentic-ai-course/tree/ex04-submit/exercises/04-failures
    ```
    Open it in your browser to check that it shows your code. Then paste it into the course submission form: **(the instructor will announce the form link)**
 
 **Changed something after tagging, before the deadline?** Move the tag to your newest commit:
 
 ```
-git tag -f ex01-submit
-git push -f origin ex01-submit
+git tag -f ex04-submit
+git push -f origin ex04-submit
 ```
 
-Grading uses the commit the tag points to at grading time, and records that commit's date. **The link must point to the right exercise:** an `ex02` link in the exercise 01 form can't be graded.
+Grading uses the commit the tag points to at grading time, and records that commit's date. **The link must point to the right homework:** an `ex05` link in the homework 04 form can't be graded.
 
-## 12. Getting a new exercise
+## 12. Getting a new exercise, or a published solution
 
 New exercises are released one at a time in the course template. To add one to your repository **without touching your own code**:
 
@@ -264,11 +266,19 @@ New exercises are released one at a time in the course template. To add one to y
 git remote add course https://github.com/alexsherba29/agentic-ai-course-student.git
 git fetch course
 git checkout course/main -- common exercises/02-docs-agent
-git commit -m "Add exercise 02"
+git commit -m "Add lesson 02"
 git push
 ```
 
 Run the `git remote add` line only the first time. After that, `git fetch course` and the `checkout` line are enough, with the new exercise's folder name. It copies the new exercise and the latest shared course code in `common/` (which you never edit). Your earlier exercises stay exactly as you left them.
+
+**Solutions.** The course's finished version of each exercise is published in its `solution/` folder: the day after each lesson, and 2–3 weeks after each homework is released. To add one, fetch and check out **only** the `solution` folder, so your own `starter/` stays untouched:
+
+```
+git fetch course
+git checkout course/main -- exercises/01-first-agent/solution
+git commit -m "Add the lesson 01 solution"
+```
 
 ## Troubleshooting
 
@@ -283,13 +293,13 @@ Run the `git remote add` line only the first time. After that, `git fetch course
 | The model is very slow or the laptop freezes | Close other programs, or switch to `qwen2.5:1.5b` (step 8). |
 | `git push` asks for a password | Run `gh auth login` again (step 3). GitHub doesn't accept account passwords for git. |
 | `remote: Repository not found` when pushing | Check that you cloned *your* repository (`git remote -v`), not the course template. |
-| The submission link shows "404" | Check that you pushed the tag (`git push origin ex01-submit`), that the folder name is correct, and that the instructor is a collaborator (step 6.5). |
+| The submission link shows "404" | Check that you pushed the tag (`git push origin ex04-submit`), that the folder name is correct, and that the instructor is a collaborator (step 6.5). |
 
 ## Questions and help
 
 Still stuck, or have any question about the course? Email **eran.beeri-bamani@biu.ac.il**. Include:
 
-- which step or exercise you're on;
+- which setup step, lesson or homework you're on;
 - the command you ran;
 - the **full error message** (copy the text; a screenshot is OK too);
 - your system (Windows, macOS or Linux).

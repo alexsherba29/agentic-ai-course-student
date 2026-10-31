@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 410" width="960" height="410" role="img" aria-label="New information changes the next action">
+<title>New information changes the next action</title><defs><marker id="a-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#004a2c"/></marker><marker id="a-bad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c2410c"/></marker><marker id="a-good" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#15803d"/></marker><marker id="a-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9ca3af"/></marker></defs>
+<rect x="1" y="1" width="958" height="408" rx="14" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<rect x="1" y="1" width="958" height="8" rx="4" fill="#004a2c"/>
+<text x="28" y="44" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="start" fill="#004a2c">New information changes the next action</text>
+<text x="28" y="70" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="normal" text-anchor="start" fill="#4b5563">The same question, two different status results.</text>
+<text x="30" y="112" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="17" font-weight="bold" text-anchor="start" fill="#14532d">VPN status: operational</text>
+<rect x="30" y="128" width="430" height="64" rx="10" fill="#e8f6fb" stroke="#2b8db3" stroke-width="2"/>
+<text x="245.0" y="155.0" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="#004a2c">Step 1</text>
+<text x="245.0" y="177.0" font-size="14" text-anchor="middle"><tspan font-family="Consolas, Menlo, DejaVu Sans Mono, monospace" fill="#1f2937">check_service_status(&quot;vpn&quot;)</tspan></text>
+<rect x="30" y="222" width="430" height="50" rx="10" fill="#e9f7ef" stroke="#15803d" stroke-width="2"/>
+<text x="245.0" y="252.5" font-size="15" text-anchor="middle"><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">result: status = operational</tspan></text>
+<rect x="30" y="300" width="430" height="64" rx="10" fill="#f3f4f6" stroke="#6b7280" stroke-width="2"/>
+<text x="245.0" y="327.0" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="#1f2937">Step 2</text>
+<text x="245.0" y="349.0" font-size="14" text-anchor="middle"><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">lookup_solution(…)  → a guide</tspan></text>
+<polyline points="245,192 245,218" fill="none" stroke="#004a2c" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a-green)"/>
+<polyline points="245,272 245,296" fill="none" stroke="#004a2c" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a-green)"/>
+<text x="245" y="390" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" text-anchor="middle" fill="#4b5563" font-style="italic">answer: follow the guide&#x27;s steps (3 model calls)</text>
+<text x="500" y="112" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="17" font-weight="bold" text-anchor="start" fill="#9a3412">VPN status: outage</text>
+<rect x="500" y="128" width="430" height="64" rx="10" fill="#e8f6fb" stroke="#2b8db3" stroke-width="2"/>
+<text x="715.0" y="155.0" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="#004a2c">Step 1</text>
+<text x="715.0" y="177.0" font-size="14" text-anchor="middle"><tspan font-family="Consolas, Menlo, DejaVu Sans Mono, monospace" fill="#1f2937">check_service_status(&quot;vpn&quot;)</tspan></text>
+<rect x="500" y="222" width="430" height="50" rx="10" fill="#fff1e6" stroke="#c2410c" stroke-width="2"/>
+<text x="715.0" y="252.5" font-size="15" text-anchor="middle"><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">result: status = outage</tspan></text>
+<rect x="500" y="300" width="430" height="64" rx="10" fill="#e9f7ef" stroke="#15803d" stroke-width="2"/>
+<text x="715.0" y="327.0" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="#14532d">Step 2</text>
+<text x="715.0" y="349.0" font-size="14" text-anchor="middle"><tspan font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" fill="#4b5563">answer: there is an outage, wait</tspan></text>
+<polyline points="715,192 715,218" fill="none" stroke="#004a2c" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a-green)"/>
+<polyline points="715,272 715,296" fill="none" stroke="#004a2c" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a-green)"/>
+<text x="715" y="390" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" text-anchor="middle" fill="#4b5563" font-style="italic">stopped after 2 model calls</text>
+<line x1="480" y1="100" x2="480" y2="395" stroke="#d1d5db" stroke-width="2" stroke-dasharray="4 4"/>
+</svg>

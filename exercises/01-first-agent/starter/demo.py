@@ -60,7 +60,7 @@ def main(argv: list[str] | None = None) -> int:
     from agent import run_agent  # this folder's agent.py
     from tools import TOOL_SPECS, make_tools
 
-    parser = argparse.ArgumentParser(description="Run the exercise 01 support agent.")
+    parser = argparse.ArgumentParser(description="Run the lesson 01 support agent.")
     parser.add_argument("--question", default=DEFAULT_QUESTION)
     parser.add_argument("--vpn-status", default="operational", choices=STATUSES)
     parser.add_argument("--max-steps", type=int, default=5)
