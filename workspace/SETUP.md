@@ -2,6 +2,8 @@
 
 This guide sets up everything you need for the course, on your own laptop: three **lessons** (01–03), which you build in class with the lecturer, and two **homework** exercises (04–05), which you do on your own and submit. You only do the setup **once**, at the start of the course.
 
+**Prefer to watch?** Two short narrated videos show this guide step by step: the [setup guide](https://github.com/alexsherba29/agentic-ai-course-student/releases/download/course-videos/setup-guide.mp4) (8½ min) and [Git and GitHub basics](https://github.com/alexsherba29/agentic-ai-course-student/releases/download/course-videos/git-basics.mp4) (4 min). Smaller 720p copies for slow connections are on the [course videos page](https://github.com/alexsherba29/agentic-ai-course-student/releases/tag/course-videos).
+
 A word you don't know? Every course term is explained in plain language in the [glossary](GLOSSARY.md).
 
 - **Time:** about 45–60 minutes, mostly waiting for downloads.

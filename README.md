@@ -14,6 +14,7 @@ New exercises appear here as they're released. The course's finished version of 
 ## Start here
 
 1. Follow **[`workspace/SETUP.md`](workspace/SETUP.md)** once. It covers accounts, installs, the AI model, creating your private repository, and how to submit homework.
+   Prefer to watch? The [course videos](https://github.com/alexsherba29/agentic-ai-course-student/releases/tag/course-videos) show the setup and Git basics step by step.
 2. Check your setup: `python workspace/smoke_test.py`
 3. Keep the **[glossary](workspace/GLOSSARY.md)** open: every course word (agent, tool, mock, `common/`, …) explained in plain language.
 4. Open the first exercise's `README.md`.
